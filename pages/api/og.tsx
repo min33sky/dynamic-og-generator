@@ -6,7 +6,7 @@ export const config = {
   runtime: 'experimental-edge',
 };
 
-const baseUrl = 'http://localhost:3000';
+const baseUrl = process.env.VERCEL_URL || 'http://localhost:3000';
 
 const interMedium = fetch(
   new URL('../../public/fonts/Inter-Medium.ttf', import.meta.url),
